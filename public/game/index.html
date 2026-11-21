@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gyro Strike</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/style.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <main id="stage">
+    <aside id="panel">
+      <h1><span class="y">GYRO</span><br><span class="r">STRIKE</span></h1>
+      <div id="join">
+        <img id="qr" alt="QR code to join with your phone">
+        <p class="code">ROOM <b id="code">----</b></p>
+        <p id="url" class="small"></p>
+      </div>
+      <ul id="slots">
+        <li id="slot1"><b>1UP</b> <span class="st">WAITING</span></li>
+        <li id="slot2"><b>2UP</b> <span class="st">WAITING</span></li>
+      </ul>
+      <p id="net" class="small warn"></p>
+      <p id="sound" class="small blink">CLICK HERE FOR SOUND</p>
+      <p id="mute" class="small warn"></p>
+      <p class="small keys">
+        KEYBOARD PLAYS ANY SLOT<br>
+        WITHOUT A PHONE<br>
+        ARROWS SPACE B R-SHIFT<br>
+        WASD F G L-SHIFT<br>
+        (FIRE BOMB ROLL)<br>
+        P PAUSE &nbsp; M MUTE
+      </p>
+    </aside>
+    <div id="screen">
+      <canvas id="cv" aria-label="Game screen"></canvas>
+      <div class="crt"></div>
+    </div>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "gyro-strike",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Galaga-style space shooter controlled by phone tilt over WebSocket",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4",
+    "selfsigned": "^5.5.0",
+    "ws": "^8.22.0"
+  }
+}

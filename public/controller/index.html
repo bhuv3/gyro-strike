@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#000000">
+  <title>Gyro Strike Controller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/style.css">
+  <link rel="stylesheet" href="controller.css">
+</head>
+<body>
+  <div id="flash"></div>
+  <div id="alert" hidden></div>
+
+  <header id="bar">
+    <span id="who">--</span>
+    <span id="status">CONNECTING</span>
+    <span id="stats"></span>
+    <span id="ping"></span>
+    <button id="mode" class="chip" aria-label="Switch tilt or joystick control">TILT</button>
+    <button id="gear" class="chip" aria-label="Settings">SET</button>
+  </header>
+
+  <main id="pad">
+    <button id="fire" class="btn fire">FIRE<small id="hint">HOLD TO SHOOT</small></button>
+    <div id="side">
+      <div id="tilt"><span id="padlbl"></span><div id="dot"></div></div>
+      <button id="bomb" class="btn bomb">BOMB<small>OR SHAKE</small></button>
+      <button id="recenter" class="btn ghost">RECENTER</button>
+    </div>
+  </main>
+
+  <section id="overlay" class="overlay">
+    <h1><span class="y">GYRO</span> <span class="r">STRIKE</span></h1>
+    <label id="codebox" hidden>ROOM CODE
+      <input id="codein" maxlength="4" autocapitalize="characters" autocomplete="off" spellcheck="false" inputmode="text">
+    </label>
+    <button id="start" class="btn big">TAP TO PLAY</button>
+    <p class="small">Hold the phone sideways like a gamepad.<br>Tilt to steer, or tap TILT up top for a joystick.</p>
+    <p id="err" class="small err"></p>
+  </section>
+
+  <section id="initials" class="overlay" hidden>
+    <h2 class="y">NEW HIGH SCORE!</h2>
+    <p id="hsscore"></p>
+    <form id="hsform">
+      <input id="hsin" maxlength="3" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="AAA">
+      <button class="btn">OK</button>
+    </form>
+  </section>
+
+  <section id="settings" class="overlay" hidden>
+    <h2>SETTINGS</h2>
+    <label>SENSITIVITY <input id="sens" type="range" min="8" max="40" step="1"><span id="sensv"></span></label>
+    <label><input id="invx" type="checkbox"> INVERT LEFT/RIGHT</label>
+    <label><input id="vert" type="checkbox"> TILT FWD/BACK MOVES UP/DOWN</label>
+    <label><input id="invy" type="checkbox"> INVERT UP/DOWN</label>
+    <label><input id="haptic" type="checkbox"> VIBRATION</label>
+    <label><input id="sound" type="checkbox"> PHONE SOUNDS</label>
+    <label><input id="flick" type="checkbox"> FLICK PHONE TO ROLL</label>
+    <button id="vibtest" class="btn ghost">TEST VIBRATION</button>
+    <p id="vibinfo" class="small"></p>
+    <button id="close" class="btn">DONE</button>
+  </section>
+
+  <script type="module" src="controller.js"></script>
+</body>
+</html>
